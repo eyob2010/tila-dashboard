@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CFAI – TILA</title>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="firebase-config.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #004e92, #000428);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    main {
+      width: 95%;
+      max-width: 1100px;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      background-color: #004e92;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+    button:hover {
+      background-color: #ffffff;
+      color: #004e92;
+      border: 1px solid #004e92;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>CFAI Dashboard</h1>
+    <p>Welcome to the TILA Interactive Dashboard</p>
+  </header>
+  <main>
+    <iframe src="https://lookerstudio.google.com/embed/reporting/b8ecda7e-5a08-4c73-9e4b-7a97e12e6a49/page/U1fJF" allowfullscreen></iframe>
+    <button onclick="firebase.auth().signOut().then(() => window.location.href='index.html')">Logout</button>
+  </main>
+</body>
+</html>
