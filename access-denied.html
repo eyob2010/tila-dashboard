@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Access Denied – TILA</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #8e0e00, #1f1c18);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 10px 0 30px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      background-color: white;
+      color: #8e0e00;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #8e0e00;
+      color: white;
+      border: 1px solid white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Access Denied</h1>
+  <p>You do not have permission to access this page.<br>
+  If you believe this is an error, please contact the system administrator.</p>
+  <button onclick="goHome()">Back to Login</button>
+
+  <script>
+    function goHome() {
+      window.location.href = "index.html"; // Adjust this path if needed
+    }
+  </script>
+
+</body>
+</html>
